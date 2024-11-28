@@ -19,7 +19,6 @@
 
 <nz-spin [nzSpinning]="loading" [nzTip]="'Loading...'" nzSize="large">
   <div class="status-header br-8" [style]="'margin-top: 10px;background:' + (statusOrg.color || '#e9f3d3')">
-    <header-i18n showLangText="false" class="langs"></header-i18n>
     <div>
       <a [href]="statusOrg.home" target="_blank">
         <img class="status-logo" [src]="statusOrg.logo" alt="" />
@@ -246,9 +245,6 @@
 <div *ngIf="showMode == 'component'" style="margin-top: 10px; margin-bottom: 250px">
   <div style="width: 60%; margin: 0 auto">
     <div style="display: flex; justify-content: space-between; font-weight: lighter; font-size: small">
-      <a href="https://github.com/apache/hertzbeat" target="_blank">
-        <button nzType="link" nz-button> {{ 'status.public.power-by' | i18n }} </button>
-      </a>
       <button nzType="primary" (click)="showIncident()" nz-button>
         {{ 'status.public.to-incident' | i18n }} <span nz-icon nzType="right-circle"></span
       ></button>
@@ -262,9 +258,6 @@
       <button nzType="primary" (click)="showComponent()" nz-button>
         <span nz-icon nzType="left-circle"></span> {{ 'status.public.to-component' | i18n }}
       </button>
-      <a href="https://github.com/apache/hertzbeat" target="_blank">
-        <button nzType="link" nz-button> {{ 'status.public.power-by' | i18n }} </button>
-      </a>
     </div>
   </div>
 </div>
